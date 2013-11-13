@@ -29,22 +29,20 @@ public class ProjectTestCase {
 		p.AddTeamToProject(team);
 		
 		member.setTeam("Pravin","Product Owner");
-		member.setTeam("Trisha","Scrum Master");
-		member.setTeam("Abhishek","Tester");
-		member.setTeam("Prajoyt","Database");
-		
 		team.AddTeamMember(member);
-		assertEquals("Prajoyt",team.getTeamMember(0).name);
+		member.setTeam("Trisha","Scrum Master");
+		team.AddTeamMember(member);
+		member.setTeam("Abhishek","Tester");
+		team.AddTeamMember(member);
+		
+		team.getTeamMember(0);
 		
 		story.createStory("As a customer i want to book tickets " , 10);
 		story.createStory("As a customer i want to cancel tickets " , 7);
 		story.createStory("As an admin i want to edit events " , 9);
 		story.createStory("As an admin i want to set up new screen shows" , 8);
 		
-		
-		
-		
-		
+	
 		
 		}
 }
