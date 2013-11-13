@@ -26,7 +26,13 @@ public class ProjectTestCase {
 		
 		p.AddTeamToProject(team);
 		
+	
+		
+		member.setTeam("Pravin","Product Owner");
+		
 		team.AddTeamMember(member);
+		
+		assertEquals("Pravin",team.getTeamMember(0).name);
 		
 		}
 }

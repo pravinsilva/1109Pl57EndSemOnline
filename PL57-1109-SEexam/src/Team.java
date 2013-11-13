@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 
 public class Team {
-	Member teamMember;
+
+	ArrayList<Member> teamMembersList = new ArrayList<Member>();
 		public String teamName;
 		
 	   public String getTeamName() {
@@ -13,8 +14,13 @@ public class Team {
 			this.teamName = teamName;
 		}
 
-		public void AddTeamMember(Member member) {
+		public void AddTeamMember(Member m) {
 			// TODO Auto-generated method stub
-			teamMember= member;
+			teamMembersList.add(m);
 		}	
+		
+		public Member getTeamMember(int index){
+			return teamMembersList.get(index);
+			
+		}
 }

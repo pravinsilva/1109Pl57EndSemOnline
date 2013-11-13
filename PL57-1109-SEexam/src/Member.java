@@ -2,14 +2,24 @@ import java.util.ArrayList;
 
 
 public class Member {
-	ArrayList<String> teamMembers = new ArrayList<String>();
-
-	public ArrayList<String> getTeamMembers() {
-		return teamMembers;
+	String name;
+	String role;
+	public String getName() {
+		return name;
 	}
-
-	public void setTeamMembers(String member) {
-		teamMembers.add(member);
+	public void setName(String name) {
+		this.name = name;
 	}
-
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public void setTeam(String string, String string2) {
+		// TODO Auto-generated method stub
+		setName(string);
+		setRole(string2);
+	}
+	
 }
