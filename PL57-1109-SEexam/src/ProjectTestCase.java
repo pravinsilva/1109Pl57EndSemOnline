@@ -8,11 +8,13 @@ public class ProjectTestCase {
 	Project p;
 	Team team;
 	Member member;
+	Story story;
 	@Before
 	public void setUp() throws Exception {
 		p=new Project();
 		team=new Team();
 		member=new Member();
+		story=new Story();
 	}
 
 	@Test
@@ -26,13 +28,23 @@ public class ProjectTestCase {
 		
 		p.AddTeamToProject(team);
 		
-	
-		
 		member.setTeam("Pravin","Product Owner");
+		member.setTeam("Trisha","Scrum Master");
+		member.setTeam("Abhishek","Tester");
+		member.setTeam("Prajoyt","Database");
 		
 		team.AddTeamMember(member);
+		assertEquals("Prajoyt",team.getTeamMember(0).name);
 		
-		assertEquals("Pravin",team.getTeamMember(0).name);
+		story.createStory("As a customer i want to book tickets " , 10);
+		story.createStory("As a customer i want to cancel tickets " , 7);
+		story.createStory("As an admin i want to edit events " , 9);
+		story.createStory("As an admin i want to set up new screen shows" , 8);
+		
+		
+		
+		
+		
 		
 		}
 }
