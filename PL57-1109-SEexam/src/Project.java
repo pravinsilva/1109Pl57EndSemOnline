@@ -1,12 +1,8 @@
 
 public class Project {
-	private Team t;
+	public Team projectTeam;
 	String projectName;
-	
-
-	public Project(){
-
-	}
+	String teamMember;
 
 
 	public String getProjectName() {
@@ -17,4 +13,11 @@ public class Project {
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
+
+
+	public void AddTeamToProject(Team t) {
+		// TODO Auto-generated method stub
+		projectTeam=t;
+	}
+	
 }
